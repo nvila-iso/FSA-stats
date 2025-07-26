@@ -3,7 +3,7 @@
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  return numbers.length;
 }
 
 /**
@@ -12,6 +12,11 @@ function getLength(numbers) {
  */
 function getSum(numbers) {
   // TODO
+  let sum = 0;
+  for (let number of numbers) {
+    sum += number;
+  }
+  return sum;
 }
 
 /**
@@ -20,6 +25,8 @@ function getSum(numbers) {
  */
 function getMean(numbers) {
   // TODO
+  let mean = getSum(numbers) / getLength(numbers);
+  return mean;
 }
 
 /**
@@ -28,6 +35,9 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min
+  let smallest = Math.min(...numbers);
+  return smallest;
 }
 
 /**
@@ -36,6 +46,8 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
+  let largest = Math.max(...numbers);
+  return largest;
 }
 
 /**
@@ -44,6 +56,11 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
+  // https://www.w3schools.com/js/js_array_sort.asp
+  let maxToMin = numbers.sort(function (a, b) {
+    return b - a;
+  });
+  return maxToMin;
 }
 
 /**
@@ -52,6 +69,13 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
+  let arr = [];
+  for (let number of numbers) {
+    if (number % 2 === 0) {
+      arr.push(number);
+    }
+  }
+  return arr;
 }
 
 /**
@@ -60,6 +84,13 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
+  let arr = [];
+  for (let number of numbers) {
+    if (number % 3 === 0) {
+      arr.push(number);
+    }
+  }
+  return arr;
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
